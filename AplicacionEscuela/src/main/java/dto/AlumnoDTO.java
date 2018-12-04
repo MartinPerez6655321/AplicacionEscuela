@@ -1,5 +1,7 @@
 package dto;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class AlumnoDTO
@@ -11,8 +13,26 @@ public class AlumnoDTO
 	private String nombre;
 	private String apellido;
 	private String responsable;
+	private String curso;
+	private String telefono;
 
 	
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+	public String getCurso() {
+		return curso;
+	}
+
+	public void setCurso(String curso) {
+		this.curso = curso;
+	}
+
 	@Override
 	public boolean equals(Object o)
 	{
@@ -52,10 +72,16 @@ public class AlumnoDTO
 		this.dni = dni;
 	}
 
-	public Date getFechaNacimiento() {
-		return fechaNacimiento;
+	public String getFechaNacimiento() {
+		DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+		String fechaNac  = df.format(fechaNacimiento);
+		return fechaNac;
 	}
 
+	public Date getFechaNacimientoExacta() {
+		return fechaNacimiento;
+	}
+	
 	public void setFechaNacimiento(Date fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}

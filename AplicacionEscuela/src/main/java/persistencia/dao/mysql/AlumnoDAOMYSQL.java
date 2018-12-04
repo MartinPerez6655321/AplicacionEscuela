@@ -59,7 +59,7 @@ public class AlumnoDAOMYSQL
 			statement.setString(2, alumnodto.getNombre());
 			statement.setString(3, alumnodto.getApellido());
 			statement.setString(4, alumnodto.getDni());
-			statement.setDate(5, new java.sql.Date(alumnodto.getFechaNacimiento().getTime()));
+			statement.setDate(5, new java.sql.Date(alumnodto.getFechaNacimientoExacta().getTime()));
 			statement.setString(6, alumnodto.getResponsable());
 			
 			if(statement.executeUpdate() > 0)
@@ -100,7 +100,7 @@ public class AlumnoDAOMYSQL
 			statement.setString(2, alumnodto.getNombre());
 			statement.setString(3, alumnodto.getApellido());
 			statement.setString(4, alumnodto.getDni());
-			statement.setDate(5, new java.sql.Date(alumnodto.getFechaNacimiento().getTime()));
+			statement.setDate(5, new java.sql.Date(alumnodto.getFechaNacimientoExacta().getTime()));
 			statement.setString(6, alumnodto.getResponsable());
 			if(statement.executeUpdate() > 0)
 			{

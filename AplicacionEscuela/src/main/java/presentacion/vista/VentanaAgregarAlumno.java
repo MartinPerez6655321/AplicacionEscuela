@@ -1,4 +1,4 @@
-package persistencia.vista;
+package presentacion.vista;
 
 import javax.swing.JDialog;
 import javax.swing.JTextField;
